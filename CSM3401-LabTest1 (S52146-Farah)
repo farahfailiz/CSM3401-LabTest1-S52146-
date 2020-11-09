@@ -1,0 +1,44 @@
+#question1
+def TotalBits( n): 
+    if (n == 0): 
+        return 0
+    else: 
+        return (n&1) + TotalBits(n>>1) 
+n = int(input("Enter Input Number : "))
+print(TotalBits(n))      
+
+
+#question2
+import collections
+a = input("Enter Your brother/ sister name")
+print(collections.Counter(a).most_common(1)[0])
+
+
+#t=question3
+test_string = input("Enter your full name : ")
+result = len(test_string.split()) 
+
+print ("The number of words in string are : " +  str(result)) 
+
+
+#question4.1
+print('Total Sum of Two Number \n')
+def sumTwoNum():
+    firstNum = input("Enter Your Birth Year : ")
+    secondNum = input("Enter Your Birth Month : ")
+    total = int(firstNum) + int(secondNum)
+    return total
+
+sum = sumTwoNum()
+print("Sum of two numbers (year and month) is : ", sum)
+
+
+#question4.2
+def productDivide(f, n, m):
+    a = f*n
+    b = f/m
+    
+    print(a, b)
+    
+productDivide(10, 2, 5)
+
